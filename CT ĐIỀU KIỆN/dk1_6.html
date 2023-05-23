@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính hoa hồng từ doanh số bán hàng</title>
+</head>
+<body>
+    <script>
+        let SP = +prompt('số lượng sản phẩm bán đc trong hôm nay')
+        function sanPham(SP){
+            let money;
+            if(SP >0 && SP < 20){
+                money = SP * 5000;
+                alert('tiền hoa hồng trong hôm nay là ' + money + 'VND');
+            }else if(SP >= 20 && SP < 50){
+                money = SP * 7000;
+                alert('tiền hoa hồng trong hôm nay là ' + money + 'VND'); 
+            }else{
+                money = SP * 10000;
+                alert('tiền hoa hồng trong hôm nay là ' + money + 'VND');   
+            }
+        }
+        sanPham(SP);
+    </script>
+</body>
+</html>

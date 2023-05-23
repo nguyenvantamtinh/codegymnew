@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+    <script>
+        let height = +prompt(' nhập chiều cao');
+        let weight = +prompt(' nhập cân nặng');
+        function mfc(height,weight){
+            let bmi = weight / height *2;
+            if(bmi < 18.5){
+                alert('underweight')
+            }else if(18.5 <= bmi && bmi < 25.0){
+                alert('Nomarl')
+            }else if(25 <= bmi && bmi <30.0){
+                alert('Overweight')
+            }else{
+                alert('Obese')
+            }
+        }
+        mfc(height,height)
+    </script>
+    
+</body>
+</html>

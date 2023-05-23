@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        form{
+            text-align: center ;
+            color: chartreuse;
+            background-color: lightsteelblue;
+            font-family: fantasy;
+        }
+        select {
+            background-color: dimgray;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1> ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</h1>
+        <label for="enter">Amount</label>
+        <input type="text" id="enter">
+        <br><br>
+        <label for="currency">From currency</label>
+        <select name="currency" id="currency">
+            <option value="vietnam">Việt Nam</option>
+            <option value="usd">USD</option>
+        </select>
+        <br><br>
+        <label for="currency1">To currency</label>
+        <select name="currency" id="currency1">
+            <option value="vietnam">Việt Nam</option>
+            <option value="usd">USD</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="convert()" style="color:yellowgreen; background-color: blue;">ĐỔI</button>
+        <p id="result"></p>
+        
+
+    </form>
+   
+    <script>
+        function convert(){
+            let currency = document.getElementById("currency").value;
+            let currency1 = document.getElementById("currency1").value;
+            let Amount = document.getElementById("enter").value;
+            let result;
+            if(currency == currency1){
+                result = Amount;
+            }else if(currency == "vietnam" && currency1 == "usd"){
+                result = Amount /24000 + '$'
+            }else{
+                result = Amount*24000 + 'VND'
+        }
+        document.getElementById("result").innerText ="result : " + result;
+        }
+    </script>
+    
+</body>
+</html>

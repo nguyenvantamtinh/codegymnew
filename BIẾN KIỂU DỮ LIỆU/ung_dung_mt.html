@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng máy tính</title>
+<head>
+   <form action="">
+    <h1 style="color: chartreuse;">MÁY TÍNH</h1>
+  
+    <input type="number" name="name" id="id1">
+    <input type="number" name="name" id="id2"><br><br>
+    <button onclick="Addition()" type="button" >Addition(+)</button>
+    <button onclick="Subtraction()" type="button">Addition(-)</button>
+    <button onclick="Multiplication()" type="button">Addition(*)</button>
+    <button onclick="Division()" type="button">Addition(/)</button>
+    <p id="result" style="color: chartreuse;"></p>
+    <style>
+        form {
+            text-align: center;
+            background-color: cadetblue;
+        }
+        button {
+            background-color: blue;
+        }
+        
+    </style>
+  </form>
+   
+</head>
+<body>
+    <script>
+        function Addition(){
+            let num1 = document.getElementById('id1').value;
+            let num2 = document.getElementById('id2').value;
+            let result = parseInt(num1)+parseInt(num2);
+            document.getElementById('result').innerHTML='kết quả ' +result;
+        }
+        function Subtraction(){
+            let num1 = document.getElementById('id1').value;
+            let num2 = document.getElementById('id2').value;
+            let result = parseInt(num1)-parseInt(num2);
+            document.getElementById('result').innerHTML='kết quả ' + result;
+        }
+        function Multiplication(){
+            let num1 = document.getElementById('id1').value;
+            let num2 = document.getElementById('id2').value;
+            let result = parseInt(num1)*parseInt(num2);
+            document.getElementById('result').innerHTML='kết quả ' + result;
+        }
+        function Division(){
+            let num1 = document.getElementById('id1').value;
+            let num2 = document.getElementById('id2').value;
+            let result = parseInt(num1)/parseInt(num2);
+            document.getElementById('result').innerHTML='kết quả ' + result;
+        }   
+        
+    </script>
+    
+</body>
+</html>

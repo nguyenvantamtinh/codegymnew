@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xếp loại học lực</title>
+</head>
+<body>
+    <script>
+        let number1 = +prompt('nhập điểm bài kiểm tra');
+        let number2 = +prompt('nhập điểm thi giưa kỳ');
+        let number3 = +prompt('nhập điểm thi cuối kỳ');
+        function diemTb(number1,number2,number3){
+            let Tb = (number1 + number2 + (number3 *2))/3;
+            if(Tb >= 8){
+                alert(' Loại Giỏi');
+            }else if(Tb >= 6.5 && Tb < 8){
+                alert(' loại khá');
+            }else if( Tb>=5 && Tb <6.5){
+                alert('Trung Bình');
+            }else{
+                alert('YẾU')
+            }
+        }
+        diemTb(number1,number2,number3)
+
+    </script>
+    
+</body>
+</html>

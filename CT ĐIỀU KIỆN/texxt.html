@@ -1,133 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table{
-            border-collapse: collapse;
+        h1{
+            text-align: center;
+            color: chartreuse;
+        }
+        body{
+            background-color: cornsilk;
             text-align: center;
         }
-        td{
-        font-weight: bolder;
-        width: 1cm;
-        height: 1cm;
-    }
+        table{
+            text-align: center;
+            background-color: darkblue;
+        }
+        
     </style>
-    
 </head>
-<body style="background-color: chartreuse; ">
-    <table>
-        <tr>
-        <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        </tr>
-        <tr>
-            <td>A</td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            
-        </tr>
-        <tr>
-            <td>B</td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
+<body>
+    <h1>BẢNG CỬU CHƯƠNG</h1>
+    <p id="result"></p>
+    <script>
+        // let table = '<table border="1">  ';
+        // for (let i = 1; i <= 9; i++) {
+        //     table+='<tr>';
+        //     for (let y = 1; y <= 9; y++) {
+        //         table+= '<td>'+y + ' * '+ i + ' = '+y*i+'</td>';
+        //     }
+        //     table+='</tr>';
+        // } 
+        // table+='</table>';
+        // document.getElementById("result").innerHTML=table;
 
-        </tr>
-        <tr>
-            <td>C</td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            
-        </tr>
-        <tr>
-            <td>D</td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
+        let tbl = document.createElement("table");
+        for (let i = 1; i <= 9; i++) {
+            let row = document.createElement("tr");
+            for (let j = 1; j <= 9; j++) {   
+                 let cel = document.createElement("td");
+                 cel.append(`i*j= ${i*j}`);   
+                 row.appendChild(cel);
+            }
+            tbl.appendChild(row);
+        }
 
-        </tr>
-        <tr>
-            <td>J</td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            
-        </tr>
-        <tr>
-            <td>K</td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-
-        </tr>
-        <tr>
-            <td>E</td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            
-        </tr>
-        <tr>
-            <td>F</td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-            <td style="background-color: black;"></td>
-            <td style="background-color: white;"></td>
-
-        </tr>
-    </table>
+        document.querySelector("body").appendChild(tbl);
+    </script>
     
 </body>
+
 </html>

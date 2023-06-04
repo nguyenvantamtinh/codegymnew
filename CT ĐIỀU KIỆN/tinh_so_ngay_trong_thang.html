@@ -14,7 +14,7 @@
     <p id="result"></p>
     <script>
         function Day(){
-            let month = document.getElementById('id').value;
+            let month =  parseInt(document.getElementById('id').value)
             switch(month){
                 case 1:
                 case 3:
@@ -23,21 +23,23 @@
                 case 8:
                 case 10:
                 case 12:
-                    document.writeln('Tháng có 31 ngày');
+                document.getElementById('result').innerHTML = month + ' có 31 ngày';
                     break;
                 case 4:    
                 case 6: 
                 case 9:    
                 case 11:  
-                    document.writeln('Tháng có 30 ngày');
+                document.getElementById('result').innerHTML = month + ' có 30 ngày';
                 break;  
                 case 2:
-                    document.writeln('Tháng có 28 hoặc 29 ngày');
+                document.getElementById('result').innerHTML = month + ' có 28 hoặc 29 ngày';
+                break;
                     
             }
-            document.getElementById('result').innerHTML 
             
         }
+
+    
     </script>
     
 </body>

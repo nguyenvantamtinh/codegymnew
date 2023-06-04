@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // điều kiện để  tạo thành 1 tam giác
+        // a,b,c > 0
+        // a + b > c
+        // b + c > a
+        // a + c > b
+        let a = +prompt('a');
+        let b = +prompt('b');
+        let c = +prompt('c');
+        if(a,b,c > 0){
+            if(a + b > c){
+                alert('c là cạnh của tam giác')
+            }else{
+                alert(' c không phải là cạnh của tam giác')
+            }
+            if(b + c > a){
+                alert('a là cạnh của tam giác')
+            }else{
+                alert(' a không phải là cạnh của tam giác')
+            }
+            if(a + c > b){
+                alert('b là cạnh của tam giác')
+            }else{
+                alert(' b không phải là cạnh của tam giác')
+            }
+        }
+    </script>
+    
+</body>
+</html>

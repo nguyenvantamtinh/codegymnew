@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị n số nguyên tố</title>
+</head>
+<body>
+<script>
+    let number, count = 0, a;
+    let i, j;
+    numbers = +prompt("nhap vao so luong muon in ra");
+    for (i = 2; count < numbers; i++) {
+        a = 0;
+        for (j = 1; j <= i; j++) {
+            if (i % j === 0) {
+                a++;
+            }
+        }
+        if (a === 2) {
+            count++;
+            document.writeln(i);
+        }
+        // if (count === numbers) {
+        //     break;
+        // }
+    }
+</script>
+</body>
+</html>

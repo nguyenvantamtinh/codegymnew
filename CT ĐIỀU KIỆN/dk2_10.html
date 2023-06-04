@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính giá điện sinh hoạt</title>
+</head>
+<body>
+    <script>
+        let Kw = +prompt('số kw điện tiêu thụ trong tháng');
+        let money ;
+        if(Kw >0 && Kw < 50){
+            money = 1928 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }else if(Kw >51 && Kw < 100){
+            money = 1786 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }else if(Kw >101 && Kw < 200){
+            money = 2074 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }else if(Kw >201 && Kw < 300){
+            money = 2612 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }else if(Kw >301 && Kw < 400){
+            money = 2919 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }else{
+            money = 2927 * Kw ;
+            alert('tiền điện là :' + money + ' VND')
+        }
+        
+    </script>
+    
+</body>
+</html>

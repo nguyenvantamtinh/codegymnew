@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính thu nhập thuế cá  nhân</title>
+</head>
+<body>
+    <script>
+        let money = +prompt(' lương của bạn');
+        if( money >0 && money <= 5000000){
+            Thue = money * 0.05;
+            alert('thuế phải trả ' + Thue + ' VND')
+        }else if(money <= 10000000){
+            Thue = money * 0.075;
+            alert('thuế phải trả ' + Thue + ' VND')
+        }else if(money <= 20000000){
+            Thue = money * 0.09;
+            alert('thuế phải trả ' + Thue + ' VND')
+        }else{
+            Thue = money * 0.12;
+            alert('thuế phải trả ' + Thue + ' VND')
+        }
+    </script>
+    
+</body>
+</html>

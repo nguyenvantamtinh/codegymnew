@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt('nhập ký tự cần kiểm tra');
+        let arr = ['a','b','c','d','e','f','g'];
+        function check_kytu(n){
+            for( let i=0; i<arr.length; i++){
+                if(n == arr[i]){
+                    let result= arr.indexOf(arr[i])
+                    document.write('vị trí thứ '+ result)
+                    break;
+                }else{
+                    document.write(arr.indexOf(n))
+                    break;
+                }
+                return;
+            }
+
+        }
+        check_kytu(n)
+    </script>
+</body>
+</html>

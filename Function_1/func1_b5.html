@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(186, 218, 155);
+        }
+        p {
+            color: yellow;
+        }
+       
+    </style>
+</head>
+<body>
+    <label for="id"></label>
+    <input type="text" id="id" placeholder="nhập từ tìm kiếm">
+    <button onclick="search()">search</button>
+    <p id="id2"></p>
+    <script>
+        let arr1 = [ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+        let arr2 = [ 'Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+        function search(){
+            let getInput = document.getElementById('id').value;
+            for(i=0; i<arr1.length; i++){
+                if(getInput == arr1[i]){
+                    let result = arr1.indexOf(arr1[i])
+                   
+                   document.getElementById('id2').innerHTML=('ngôi sao tương ứng  : ' + arr2[result])
+                }
+                            
+            }
+        }
+    </script>
+    
+</body>
+</html>

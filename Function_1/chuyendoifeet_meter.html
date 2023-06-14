@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: honeydew;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="id1">Enter a number</label>
+    <input type="text" id="id1">
+    <br><br>
+    <label for="id2"></label>
+    <select name="feet" id="id2">
+        <option value="feet">feet</option>
+        <option value="meters">meters</option>
+    </select><br><br>
+    <label for="id3"></label>
+    <select name="meters" id="id3">       
+        <option value="meters">meters</option>
+        <option value="feet">feet</option>
+    </select><br><br>
+    <button onclick="ketQua()">Đổi</button>
+    <p id="result">result</p>
+    <script>
+        function ketQua(){
+            let enter = document.getElementById('id1').value;           
+            let feet = document.getElementById('id2').value;
+            let meters = document.getElementById('id3').value;
+            let result;
+            if(feet == meters){
+                result = enter;
+
+            }else if(feet == 'feet' && meters == 'meters'){
+                result = enter * 0.305 + ' meters'
+            }else{
+                result = enter * 3.279 + ' feet'
+            }
+            document.getElementById('result').innerHTML= 'result :' + result 
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thu nhập thuế cá nhân</title>
+</head>
+<body>
+    <script>
+        let money = parseInt(prompt('tiền lương của bạn'));
+        if(money >= 15000000){
+            let thue;
+            thue =money * 0.2;
+            alert('tiền thuế phải trả '+ thue);
+        }else if(money >=7000000 && money < 15000000){
+            thue =money * 0.1;
+            alert('tiền thuế phải trả '+ thue);
+        }else{
+            thue =money * 0.05;
+            alert('tiền thuế phải trả '+ thue);
+
+        }
+
+    </script>
+    
+</body>
+</html>

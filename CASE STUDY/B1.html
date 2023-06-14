@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>hình chữ nhật rỗng</title>
 </head>
 <body>
     <script>
-        for(i=1; i<=5; i++){
-            for(j=1; j<=10; j++){
-                if(j==1 || i==1 || j==10 || i==5){
+        for(let x=1; x<=4; x++){
+            for(let y=1; y<=5; y++){
+                if(x==1 || y==1 || x==4 || y==5){
                     document.write('*')
                 }else{
-                    document.write('&nbsp;&nbsp')
-                }
-            }
-           document.write('<br>')
+                    document.write('&nbsp&nbsp')
+                }                               
+            }document.write('<br>')
         }
-
-
-       
     </script>
     
 </body>

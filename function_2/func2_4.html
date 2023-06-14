@@ -8,19 +8,16 @@
 </head>
 <body>
     <script>
-        for(i=1; i<=5; i++){
-            for(j=1; j<=10; j++){
-                if(j==1 || i==1 || j==10 || i==5){
-                    document.write('*')
-                }else{
-                    document.write('&nbsp;&nbsp')
-                }
+        let n = prompt('');
+
+        function check(n){
+            if(n % 1 == 0){
+                alert( n + ' là số');
+            }else{
+                alert(n + ' là ký tự');
             }
-           document.write('<br>')
         }
-
-
-       
+        check(n)
     </script>
     
 </body>

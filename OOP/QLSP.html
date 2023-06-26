@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add New Product</h1>
+    <label for="id1"></label>
+    <input type="text" id="id1" placeholder="New Product">
+    <button onclick="create()">Save</button>
+    <p id="result"></p>
+    <!-- <table border="1">
+        <tr>
+            <th>Stt</th>
+            <th>Product Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td>Stt</td>
+            <td>Product</td>
+            <td><button>Edit</button></td>
+        </tr>
+    </table> -->
+    <script>
+        let arr = [];
+        let index = 0;
+
+        class Product_Name{
+            constructor(Name){
+                this.Name=Name;
+            }
+        }
+
+        let Product1 = new Product_Name('samsung')
+        let Product2 = new Product_Name('iphone')
+        arr.push(Product1,Product2)
+        display(arr)
+
+        function display(list) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString +=  ` <tr>
+        <td>${i+1}</td>
+        <td>${list[i].Name}</td>
+        <td><button onclick='EditProduct(${i})'>Edit</button></td>
+        <td><button onclick='deleteProduct(${i})'>Delete</button></td>
+    </tr>`
+            
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+
+// Them
+    function create(){
+        console.log(index);
+        let newProduct = new Product_Name(document.getElementById('id1').value) ;
+        if(index >0){
+           arr[index] =  newProduct
+        }
+        else{
+            arr.push(newProduct);
+            index = 0;
+        }
+         
+       display(arr);
+    }
+// Delete
+    function deleteProduct(index){
+
+        let cof = confirm('Delete ' + arr[i].Name);
+        if(cof){
+            arr.splice(index,1)
+        }
+        display(arr)
+        
+    }
+// sửa
+    function EditProduct(i){
+       
+        id1.value = arr[i].Name;
+        index = i;
+        console.log(index);
+        // arr[index] = id1.value;
+        // display(arr);
+    } 
+
+    </script>
+    
+</body>
+</html>

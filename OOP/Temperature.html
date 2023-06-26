@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+    <!-- <h2>Chuyển Đổi Temperature</h2>
+    <label for="id">độ C</label>
+    <input type="text" id="id" >
+    
+    <label for="id1">độ F</label>
+    <input type="text" id="id1">
+    <button onclick="convert()">calc</button>
+    <p id="result"></p> -->
+    <script>
+        class Temperature{
+            constructor(doC,doF){
+                this.doC = doC;
+                this.doF = doF;
+            }
+            convert_to_doF(){
+                return 9/5*(this.doF-32)+ ' độ F'
+            }
+            convert_to_doC(){
+                return 9/5*this.doC+32+ ' độ C'
+            }
+        }
+        let Temperature1 = new Temperature(32,25)
+        console.log(Temperature1.convert_to_doF());
+        console.log(Temperature1.convert_to_doC());
+        // function convert(){
+        //     let new_doC = +document.getElementById('id').value;
+        //     let new_doF = +document.getElementById('id1').value;
+        //     let Temperature1 = new (new_doC,new_doF)
+        //     result.innerHTML = `${Temperature1.convert_to_doF()} Độ F ${Temperature1.convert_to_doC()} ĐỘ C`
+
+        // }
+    </script>
+</body>
+</html>

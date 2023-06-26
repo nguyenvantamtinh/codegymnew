@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+
+        thead{
+            background: red;
+        }
+
+        td{
+            border: 1px solid blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+
+    <!-- <table>
+        <thead>
+            <th>id</th>
+            <th>tên</th>
+            <th>lớp</th>
+        </thead>
+        <tbody id="tbd">
+           <tr>
+                <td>${id}</td>trước
+                <td>${name}</td>
+                <td>${class}</td>
+            </tr> 
+           
+        </tbody>
+    </table>
+
+
+    <script>
+        let a = ['quoc', 'tuan', 'nhi'];
+        let t = '';
+
+        for(let i = 0; i <a.length; i++){
+            t += `
+            <tr>
+                <td>${i+1}</td>
+                <td>${a[i]}</td>
+                <td>class ${i+1}</td>
+            </tr>
+            `;
+        }
+
+        tbd.innerHTML = t;
+    </script> -->
+
+
+    <script>
+        let a = ['quoc', 'tuan', 'nhi'];
+
+        let tbl = document.createElement("table");
+
+        let thead = document.createElement("thead");
+        const thID = document.createElement("th");
+        thID.append("ID");
+        const thName = document.createElement("th");
+        thName.append("Name");
+        const thClass = document.createElement("th");
+        thClass.append("Class");
+
+        thead.appendChild(thID);
+        thead.appendChild(thName);
+        thead.appendChild(thClass);
+
+        let tbd = document.createElement("tbody");
+        for(let i =0; i< a.length; i++){
+            const tr = document.createElement("tr");
+            const tdId = document.createElement("td");
+            tdId.append(i+1);
+            const tdName = document.createElement("td");
+            tdName.append(a[i]);
+            const tdClass = document.createElement("td");
+            tdClass.append("class" + i);
+        
+            tr.appendChild(tdId);
+            tr.appendChild(tdName);
+            tr.appendChild(tdClass);
+
+            tbd.appendChild(tr);
+        }
+
+        tbl.appendChild(thead);
+        tbl.appendChild(tbd);
+
+        document.querySelector("div").appendChild(tbl);
+    </script>
+    
+</body>
+</html>

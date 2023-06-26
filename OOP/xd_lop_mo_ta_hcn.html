@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: darksalmon;
+        color: blue;
+    }
+</style>
+<body>
+    <h2>Hình Chữ Nhật</h2>
+    <label for="id">width</label>
+    <input type="text" id="id">
+    
+    <label for="id1">lenght</label>
+    <input type="text" id="id1">
+    <button onclick="calc()">calc</button>
+    <p id="result"></p>
+
+    <script>
+        class hcn{
+            constructor(width,lenght){
+                this.width = width;
+                this.lenght = lenght;
+            }
+            dientich(){
+                return 'diện tích hình chữ nhật là : '+ this.width*this.lenght;
+            }
+            chuvi(){
+                return 'chu vi hình chữ nhật là :' + (this.width + this.lenght)*2;
+            }
+        }
+        
+        function calc(){
+            let newwidth = +document.getElementById('id').value;
+            let newlenght =+document.getElementById('id1').value;
+            let hcn1 = new hcn(newwidth,newlenght);
+            result.innerHTML = `chuvi : ${hcn1.chuvi()}  <br/> dientich :${hcn1.dientich()}` ;
+
+  
+        }
+
+
+         // let hcn1 = new hcn(3,4)
+        // let hcn2 = new hcn(5,20)
+        // console.log(hcn1.chuvi());
+        // console.log(hcn2.chuvi());
+        // console.log(hcn1.dientich());
+        // console.log(hcn2.dientich());
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    </script>
+    
+</body>
+</html>
